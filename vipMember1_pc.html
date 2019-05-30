@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://qiniu.fjreading.com/FqrhQ7y04Faf2cJSsFmJpZIDn2kx" type="image/x-icon" />
+  <title>纷极阅读</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/member_pc/member1_pc.css">
+</head>
+<body>
+  <div class="box">
+    <div class="content">
+      <div class="right">
+        <h3>开通阅读教练</h3>
+        <div class="reght_content">
+          <img src="./images/fenji_pc/member/shouji.png" alt="">
+          <input class="input" type="text" placeholder="输入需要开通纷极阅读教练的手机号" />
+        </div>
+        <span class="val"></span>
+        <div class="next" onclick="btn()">
+          下一步&nbsp;
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/jquery-2.1.4.min.js"></script>
+<script>
+  let val = $('.input')[0];
+  let flag;
+  function btn() {
+    if(flag) {
+      sessionStorage.setItem("phone", val.value)
+      window.location.href='./vipMember2_pc.html'
+    } else if (val.value === '') {
+      $('.val').css('display', 'block')
+      $('.val')[0].innerHTML = '手机号不能为空';
+    }
+  }
+
+  $("input").blur(function(){
+    if(val.value === '') {
+      $('.val').css('display', 'block')
+      $('.val')[0].innerHTML = '手机号不能为空';
+      flag = false
+    } else {
+      if(!(/^1[34578]\d{9}$/.test(val.value))){ 
+        $('.val').css('display', 'block')
+        $('.val')[0].innerHTML = '手机号码有误，请重填';
+        flag = false
+      } else {
+        $('.val').css('display', 'none')
+        flag = true
+      }
+    }
+  });
+</script>
+</html>

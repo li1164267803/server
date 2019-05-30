@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://qiniu.fjreading.com/FqrhQ7y04Faf2cJSsFmJpZIDn2kx" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>纷极阅读</title>
+  <script src="./js/path.js"></script>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/member_pc/member2_pc.css">
+</head>
+<body>
+  <div class="box">
+    <div class="content">
+      <div class="logo">
+        <div class="logo_left">
+          <img src="./images/fenji_pc/member/logo.png" alt="">
+          <span>纷极阅读教练</span>
+        </div>
+        <div class="logo_right">
+          <div>
+            <img src="./images/fenji_pc/member/shouji2.png" alt="">
+            <span class="span">将为此号码开通阅读教练</span>
+          </div>
+          <span class="phone">135********</span>
+        </div>
+      </div>
+      <ul>
+        <!-- <li>
+          <div class="bak"></div>
+          <h3><b>37.00</b><span>元</span></h3>
+          <p class="cont">45.00 <span>元</span></p>
+          <p class="footer">连续包月</p>
+        </li>
+        <li>
+          <div></div>
+          <h3><b>388.00</b><span>元</span></h3>
+          <p class="cont">540.00 <span>元</span></p>
+          <p class="footer">包年</p>
+        </li>
+        <li>
+          <div></div>
+          <h3><b>776.00</b><span>元</span></h3>
+          <p class="cont">1620.00 <span>元</span></p>
+          <p class="footer">包年送一年</p>
+        </li> -->
+      </ul>
+      <div class="footer">
+        <h4>选择支付方式付款：</h4>
+        <div class="footer_box">
+          <div class="zonghe">
+            <p>总计：<b>37.00</b><span>元</span></p>
+          </div>
+          <div class="erwei_box">
+            <div class="erwei">
+              <span>《纷极阅读教练服务协议》</span>
+              <div class="img">
+                <img class="erwei_img" src="" alt="" style="width: 100%">
+              </div>
+              <p>北京纷极科技有限公司</p>
+            </div>
+          </div>          
+          <div class="btn">
+            <span>微信支付</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  
+<script src="./js/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript">
+  window.onload = function() {
+    let ip = returnCitySN["cip"] // 用户ip地址
+
+    $('.phone')[0].innerHTML = sessionStorage.getItem('phone')
+    // let phoneNum = sessionStorage.getItem('phone'),
+      let phoneNum = getQueryString('phone') || localStorage.ph;  
+        code = getQueryString('code'),
+        // phoneNum = getQueryString('phone') || 17662137956,
+        phoneNum =  17662137956,
+        goodsId = 0;
+    console.log('basepath', basepath,phoneNum)
+
+    $.get(basepath + "/api/ecs/v1/goods/list/" + phoneNum + "?pageNum=1&pageSize=10",
+        function (res) {
+          console.log('res', res)
+            if (res.code === 200) {
+                goodsList = res.data
+                goodsList.map(function (value) {
+                    let options =                        
+                        `<li class="options">
+                            <div class="bak"></div>
+                            <h3><b>${value.marketPriceExp}</b><span>元</span></h3>
+                            <p class="cont">${value.retailPriceExp} <span>元</span></p>
+                            <p class="footer">${value.goodsName}</p>
+                        </li>`
+                    $('ul').append(options);
+                    $('.options').last().data('goodId', value.goodsId);
+                })
+                $('.zonghe b')[0].innerHTML = goodsList[0].marketPriceExp;
+                goodsId = $('.options').first().data('goodId');
+                $('ul li div').removeClass('bak')
+                $('ul li').first().children('div').addClass('bak')
+            }
+        }
+    )
+
+    $('ul ').on('click', 'li' ,function() { // 点击选择商品
+      console.log('选择商品')
+
+      $('ul li').siblings().children().removeClass('bak')
+      $(this).children().eq(0).addClass('bak')
+      console.log($(this).children())
+      $('.zonghe b')[0].innerHTML = $(this).find('b')[0].innerHTML
+      goodsId = $(this).data('goodId');
+    })
+
+
+    $('.btn').click(function() { // 生成订单二维码
+      console.log('点击支付')
+      let params = {
+        // phoneNum: phoneNum,
+        phoneNum: phoneNum,
+        goodsId: goodsId,
+        tradeType: 'NATIVE',
+        spbillCreateIp: ip
+      }
+
+      $.ajax({
+        url: basepath + '/api/ecs/v1/web/order',
+        data: JSON.stringify(params),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        type: "POST",
+        success: function(res) {
+          if( res.code === 200 ) {
+            console.log(res.data)
+            $('.erwei_img').attr('src','data:image/png;base64,' + res.data.codeUrl); 
+          }else{
+            console.log( '失败',res)
+
+          }
+
+          $('.erwei_box').show() // 显示二维码
+        }
+      })
+      
+    })
+
+    function getQueryString(name) {// 获取参数
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return unescape(r[2]);
+        }
+        return null;
+    }
+
+  }
+</script>
+</html>

@@ -1,0 +1,608 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  height: 6.88rem;
+  background: url(../../images/fenji_m/bannerbei.png) no-repeat 0 -0.4rem;
+  background-size: 9.6rem 6.88rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.header .header_logo .logo {
+  float: left;
+  width: 1.85rem;
+  height: 0.49rem;
+  margin-top: 0.41rem;
+  margin-left: 0.29rem;
+}
+
+.header .header_logo .btn {
+  position: relative;
+}
+
+.header .header_logo .btn .logo_btn {
+  float: right;
+  margin-top: 6px;
+  margin-right: -7px;
+  width: 1.32rem;
+  height: 1.38rem;
+}
+
+.header .header_logo .btn .btn_nav {
+  width: 2.05rem;
+  height: 3.75rem;
+  background: url("../../images/fenji_m/btn_bei.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 56px;
+  right: 10px;
+  text-align: center;
+  display: none;
+  padding-top: 30px;
+}
+
+.header .header_logo .btn .btn_nav .active {
+  font-size: 18px;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: 500;
+  color: #78c996;
+  line-height: 30px;
+}
+
+.header .header_logo .btn .btn_nav p {
+  font-size: 14px;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: 500;
+  color: #999999;
+  line-height: 28px;
+}
+
+.header .header_fenji {
+  margin-top: 1.66rem;
+  margin-left: 0.47rem;
+}
+
+.header .header_fenji div {
+  width: 4.31rem;
+  font-size: 0.46rem;
+  font-family: SourceHanSansSC-Heavy;
+  font-weight: 800;
+  color: #266270;
+  line-height: 0.63rem;
+  background: linear-gradient(0deg, #7bcb94 0%, #76c995 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header .header_fenji .header_one {
+  width: 5.14rem;
+  font-size: 0.26rem;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: 500;
+  color: #266270;
+  background: linear-gradient(0deg, #85d28e 0%, #84d18d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header .header_fenji p {
+  height: 0.5rem;
+  font-size: 0.2rem;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: 500;
+  color: #86978f;
+  line-height: 0.79rem;
+}
+
+.header .header_ling {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.43rem;
+  width: 4.97rem;
+  height: 1.68rem;
+}
+
+.changqi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.changqi .changqi_a {
+  width: 5.25rem;
+  height: 0.72rem;
+  margin-bottom: 0.32rem;
+  margin-top: 0.6rem;
+}
+
+.changqi .changqisi {
+  width: 5.86rem;
+  height: 6.14rem;
+}
+
+.liu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+  padding-bottom: 25.5rem;
+}
+
+.liu .liu_h1 {
+  width: 4.77rem;
+  height: 0.40rem;
+}
+
+.liu .liu_box .liu1 {
+  width: 2.91rem;
+  height: 3.53rem;
+  position: absolute;
+  left: 0.27rem;
+  top: 16.37rem;
+}
+
+.liu .liu_box .liu2 {
+  width: 4.58rem;
+  height: 2.68rem;
+  position: absolute;
+  top: 16.35rem;
+  right: 0;
+}
+
+.liu .liu_box .liu3 {
+  width: 4.26rem;
+  height: 2.82rem;
+  position: absolute;
+  top: 20.3rem;
+  left: 0;
+}
+
+.liu .liu_box .liu4 {
+  width: 3rem;
+  height: 3.29rem;
+  position: absolute;
+  top: 19.46rem;
+  right: 0.40rem;
+}
+
+.liu .liu_box .liu5 {
+  width: 2.75rem;
+  height: 1.31rem;
+  position: absolute;
+  top: 23.24rem;
+  right: 0.67rem;
+}
+
+.liu .liu_box .liu6 {
+  width: 3.35rem;
+  height: 3.73rem;
+  position: absolute;
+  top: 23.57rem;
+  left: 0.26rem;
+}
+
+.liu .liu_box .liu7 {
+  width: 3.47rem;
+  height: 2.58rem;
+  position: absolute;
+  top: 25rem;
+  right: 0;
+}
+
+.liu .liu_box .liu8 {
+  width: 3.39rem;
+  height: 2.85rem;
+  position: absolute;
+  top: 27.85rem;
+  left: 0;
+}
+
+.liu .liu_box .liu9 {
+  width: 3.51rem;
+  height: 2.69rem;
+  position: absolute;
+  top: 28.04rem;
+  right: 0.31rem;
+}
+
+.liu .liu10 {
+  padding-top: 16rem;
+}
+
+.fenji .fenji_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.58rem;
+}
+
+.fenji .fenji_header img {
+  width: 4.75rem;
+  height: 0.39rem;
+  margin-bottom: 0.30rem;
+}
+
+.fenji .fenji_header p {
+  width: 6.77rem;
+  height: 2.15rem;
+  font-size: 0.2rem;
+  font-family: SourceHanSansSC-Normal;
+  font-weight: 400;
+  color: #003b49;
+  line-height: 0.39rem;
+}
+
+.fenji ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+}
+
+.fenji ul img {
+  width: 0.78rem;
+  height: 0.75rem;
+}
+
+.fenji ul .fenji_shang {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.08rem;
+  z-index: -1;
+}
+
+.fenji ul .fenji_xia {
+  position: absolute;
+  right: 0.08rem;
+  bottom: 0;
+  z-index: -1;
+}
+
+.fenji ul li {
+  width: 3.20rem;
+  height: 3.35rem;
+  margin-bottom: 0.52rem;
+  background: white;
+  box-shadow: 0px 0px 79px 0px rgba(220, 220, 220, 0.42);
+}
+
+.fenji ul li h3 {
+  height: 0.25rem;
+  font-size: 0.26rem;
+  font-family: SourceHanSansSC-Medium;
+  color: #003b49;
+  line-height: 0.58rem;
+  margin-left: 0.20rem;
+  margin-bottom: 0.4rem;
+}
+
+.fenji ul li p {
+  width: 2.79rem;
+  margin-left: 0.18rem;
+  font-size: 0.2rem;
+  font-family: SourceHanSansSC-Regular;
+  font-weight: 400;
+  color: #003b49;
+  line-height: 0.4rem;
+}
+
+.fenji .fenji_biao {
+  width: 7.5rem;
+  height: 33.78rem;
+  background: url("../../images/fenji_m/fenji_bei.png") no-repeat;
+  background-size: 100% 33rem;
+  padding-top: 0.8rem;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.fenji .fenji_biao .fenji_2 {
+  padding-bottom: 0.98rem;
+}
+
+.reading, .kepu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.88rem;
+}
+
+.reading img, .kepu img {
+  width: 4.66rem;
+  height: 0.45rem;
+  margin-bottom: 0.36rem;
+}
+
+.reading p, .kepu p {
+  width: 6.9rem;
+  height: 3.3rem;
+  font-size: 0.22rem;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: 500;
+  color: #003b49;
+  line-height: 0.44rem;
+}
+
+.kepu img {
+  margin-bottom: 0.6rem;
+  margin-top: 1rem;
+}
+
+.xuesheng .xuesheng_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.xuesheng img {
+  width: 4.65rem;
+  height: 0.42rem;
+}
+
+.xuesheng h4 {
+  height: 0.17rem;
+  font-size: 0.18rem;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: bold;
+  color: #003b49;
+  line-height: 0.36rem;
+  margin: 0.5rem 0 0.26rem 0.32rem;
+}
+
+.xuesheng h3 {
+  width: 0.55rem;
+  height: 0.38rem;
+  font-size: 0.48rem;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: bold;
+  color: #e8edef;
+  line-height: 0.71rem;
+  margin-bottom: 0.2rem;
+}
+
+.xuesheng span {
+  height: 0.22rem;
+  font-size: 0.22rem;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: bold;
+  color: #003b49;
+  line-height: 0.37rem;
+}
+
+.xuesheng p {
+  height: 0.4rem;
+  font-size: 0.18rem;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: 500;
+  color: #003b49;
+  line-height: 0.30rem;
+}
+
+.xuesheng .xuesheng_box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.xuesheng .xuesheng_box .left div {
+  margin-bottom: 0.29rem;
+  width: 3.8rem;
+  height: 1.91rem;
+  background: white;
+  box-shadow: 0px 34px 166px 0px rgba(106, 113, 110, 0.13);
+}
+
+.xuesheng .xuesheng_box .left div .nei {
+  margin-left: 0.37rem;
+}
+
+.xuesheng .xuesheng_box .right div {
+  width: 2.68rem;
+  height: 1.91rem;
+  background: white;
+  box-shadow: 0px 34px 166px 0px rgba(106, 113, 110, 0.13);
+  margin-bottom: 0.29rem;
+}
+
+.xuesheng .xuesheng_box .right div .nei {
+  width: 2.08rem;
+  margin-left: 0.37rem;
+}
+
+.xuesheng .xuesheng_footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.xuesheng .xuesheng_footer .nei {
+  margin-left: 0.37rem;
+}
+
+.xuesheng .xuesheng_footer .left {
+  width: 2.68rem;
+  height: 1.91rem;
+  background: white;
+  box-shadow: 0px 34px 166px 0px rgba(106, 113, 110, 0.13);
+}
+
+.xuesheng .xuesheng_footer .right {
+  margin-bottom: 0.29rem;
+  width: 3.8rem;
+  height: 1.91rem;
+  background: white;
+  box-shadow: 0px 34px 166px 0px rgba(106, 113, 110, 0.13);
+}
+
+.zhuanjia .ti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zhuanjia .ti img {
+  width: 4.69rem;
+  height: 0.39rem;
+  margin-top: 0.88rem;
+  margin-bottom: 0.64rem;
+}
+
+.zhuanjia .shangjiao {
+  width: 0.24rem;
+  height: 0.23rem;
+  display: block;
+}
+
+.zhuanjia .zhuanjia_left {
+  width: 1.5rem;
+  height: 2.06rem;
+  float: left;
+}
+
+.zhuanjia li {
+  float: left;
+  box-sizing: border-box;
+  margin-left: 0.2rem;
+  margin-bottom: 20px;
+  width: 2.78rem;
+  height: 2.42rem;
+  background: white;
+  box-shadow: 0px 34px 166px 0px rgba(106, 113, 110, 0.13);
+  padding-left: 11px;
+}
+
+.zhuanjia li .zhuan_header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.12rem;
+}
+
+.zhuanjia li .tou {
+  width: 0.64rem;
+  height: 0.64rem;
+}
+
+.zhuanjia li span {
+  width: 0.69rem;
+  height: 0.21rem;
+  font-size: 0.22rem;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: bold;
+  color: #003b49;
+}
+
+.zhuanjia li p {
+  height: 1.38rem;
+  font-size: 0.12rem;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: 500;
+  color: #003b49;
+}
+
+.evaluate {
+  padding-top: 1rem;
+  clear: both;
+  height: 11.82rem;
+  background: url("../../images/fenji_m/fenji_bei2.png") no-repeat;
+  background-size: 100% 11.6rem;
+}
+
+.evaluate .evaluate_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.76rem;
+}
+
+.evaluate .evaluate_img img {
+  width: 4.69rem;
+  height: 0.38rem;
+}
+
+.evaluate ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0.23rem;
+  padding-right: 0.32rem;
+  justify-content: space-between;
+}
+
+.evaluate ul li {
+  margin-bottom: 0.35rem;
+  padding-left: 0.21rem;
+  padding-top: 0.2rem;
+  padding-right: 0.28rem;
+  background: white;
+  box-shadow: 0px 0px 139px 0px rgba(207, 207, 207, 0.16);
+}
+
+.evaluate ul li .evaluate_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.evaluate ul li .evaluate_header img {
+  width: 0.19rem;
+  height: 0.17rem;
+  display: block;
+}
+
+.evaluate ul li .evaluate_header .tou {
+  width: 0.55rem;
+  height: 0.55rem;
+}
+
+.evaluate ul li p {
+  margin-top: 0.20rem;
+  height: 0.98rem;
+  font-size: 12px;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: 500;
+  color: #003b49;
+  line-height: 0.3rem;
+}
+
+.footer {
+  display: flex;
+  margin-bottom: 0.23rem;
+}
+
+.footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 0.32rem;
+  width: 2.2rem;
+}
+
+.footer img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-bottom: 0.06rem;
+  display: block;
+}
+
+.footer span {
+  font-size: 12px;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: 500;
+  color: #666666;
+}
+
+.footer p {
+  height: 1.2rem;
+  font-size: 0.12rem;
+  font-family: SourceHanSansSC-Medium;
+  font-weight: 500;
+  color: #6f6e6e;
+  line-height: 0.33rem;
+  margin-left: 0.41rem;
+}

@@ -1,0 +1,251 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.box{
+  width: 100%;
+  height: 100%;
+  background: url('../../images/fenji_pc/member/bak.png') no-repeat -1853px -65px;
+  background-size: 319% 227%;
+  // background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content{
+    width:843px;
+    height:564px;
+    background:#F9F9F9;
+    box-shadow:0px 10px 34px 0px rgba(159,192,179,0.44);
+    border-radius:5px;
+    text-align: center;
+    .logo{
+      margin-top: 31px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .logo_left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width:24px;
+          height:24px;
+          margin-right: 9px;
+        }
+        span {
+          width:117px;
+          height:17px;
+          font-size:18px;
+          font-family:SourceHanSansSC-Medium;
+          font-weight:500;
+          color:rgba(125,132,141,1);
+        }
+      }
+
+      .logo_right {
+        width:366px;
+        height:48px;
+        background:rgba(255,255,255,1);
+        box-shadow:-2px 9px 81px 0px rgba(186,186,186,0.18);
+        border-radius:5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        img {
+          width: 11px;
+          height: 15px;
+          margin-right: 9px;
+          margin-left: 17px;
+        }
+        .span {
+          width:132px;
+          height:11px;
+          font-size:11px;
+          font-family:SourceHanSansSC-Light;
+          font-weight:300;
+          color:rgba(115,116,117,1);
+        }
+        .phone {
+          width:112px;
+          height:12px;
+          font-size:15px;
+          font-family:SourceHanSansSC-Light;
+          font-weight:300;
+          color:rgba(81,82,84,1);
+        }
+      }
+    }
+  }
+
+  ul {
+    width: 80%;
+    margin-top: 25px;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around;
+    li {
+      background-size: 100%;
+      width: 192px;
+      height: 183px;
+      position: relative;
+      background: #FFFFFF;
+      .bak {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('../../images/fenji_pc/member/kuang.png') no-repeat;
+        background-size: 100%;
+
+      }
+      h3 {
+        margin-top: 28px;
+        margin-bottom: 20px;
+        height:24px;
+        font-size:31px;
+        font-family:SourceHanSansSC-Regular;
+        font-weight:400;
+        color:rgba(98,195,120,1);
+        span {
+          height:13px;
+          font-size:15px;
+          font-family:SourceHanSansSC-Normal;
+          font-weight:400;
+          color:rgba(98,195,120,1);
+        }
+      }
+      .cont {
+        height:16px;
+        font-size:20px;
+        font-family:SourceHanSansSC-ExtraLight;
+        font-weight:200;
+        color:rgba(163,166,166,1);
+
+        display: inline-block;
+        background-image: url(data:image/gif;base64,R0lGODlhAQABAJEAAAAAAP///5mZmf///yH5BAEAAAMALAAAAAABAAEAAAICVAEAOw==);
+        background-repeat: repeat-x;
+        background-position: left center;
+        line-height: 15px;
+        span {
+          height:11px;
+          font-size:13px;
+          font-family:SourceHanSansSC-Light;
+          font-weight:300;
+          color:rgba(204,205,205,1);
+        }
+      }
+
+      .footer {
+        font-size:24px;
+        font-family:SourceHanSansSC-Light;
+        font-weight:300;
+        color:rgba(125,132,141,1);
+        margin-top: 44px;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 31px;
+    width: 82%;
+    margin-left: 9%;
+    .footer_box {
+      height: 184px;
+      display: flex;
+      position: relative;
+      clear: both;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    h4 {
+      height:14px;
+      float: left;
+      margin-left: 1%;
+      font-size:15px;
+      font-family:SourceHanSansSC-Medium;
+      font-weight:500;
+      color:rgba(125,132,141,1);
+      line-height:16px;
+    }
+    .erwei_box {
+      display: none;
+      position: absolute;
+      left: 41%;
+    }
+    .erwei {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      span {
+        font-size:11px;
+        font-family:SourceHanSansSC-Light;
+        font-weight:300;
+        color:rgba(88,89,89,1);
+        line-height:24px;
+      }
+      .img {
+        width:129px;
+        height:129px;
+        background:rgba(204,205,205,1);       
+      }
+      p {
+        margin-top: 13px;
+        font-size:16px;
+        font-family:SourceHanSansSC-Regular;
+        font-weight:400;
+        color:rgba(125,132,141,1);
+      }
+    }
+
+    .zonghe {
+      float: left;
+      p {
+        font-size:18px;
+        font-family:SourceHanSansSC-Normal;
+        font-weight:400;
+        color:rgba(125,132,141,1);
+        line-height:24px;
+      }
+      b {
+        height:24px;
+        font-size:31px;
+        font-family:SourceHanSansSC-Regular;
+        font-weight:400;
+        color:rgba(98,195,120,1);
+        line-height:24px;
+      }
+      span {
+        height:13px;
+        font-size:15px;
+        font-family:SourceHanSansSC-Normal;
+        font-weight:400;
+        color:rgba(98,195,120,1);
+        line-height:24px;
+      }
+    }
+
+    .btn {
+      width:156px;
+      height:38px;
+      background:rgba(100,195,121,1);
+      box-shadow:0px 0px 19px 0px rgba(100,195,121,0.4);
+      border-radius:20px;
+      line-height:39px;
+      span {
+        font-size:19px;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        
+      }
+    }
+  }
+}
